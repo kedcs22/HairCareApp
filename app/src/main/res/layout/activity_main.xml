@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/greetingView" />
 
     <VideoView
-        android:id="@+id/videoView"
+        android:id="@+id/discoveryVideo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -83,7 +83,7 @@
         android:layout_marginTop="20dp"
         android:text="Following"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView" />
+        app:layout_constraintTop_toBottomOf="@+id/discoveryVideo" />
 
     <VideoView
         android:id="@+id/videoView2"
