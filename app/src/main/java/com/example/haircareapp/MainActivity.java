@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=tYS-PSkzi7c");
+        Uri uri = Uri.parse("https://cs.widener.edu/~fischbac/test");
         VideoView discoveryVideo = (VideoView) findViewById(R.id.discoveryVideo);
+        //discoveryVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testvid));
         discoveryVideo.setVideoURI(uri);
         discoveryVideo.start();
     }
