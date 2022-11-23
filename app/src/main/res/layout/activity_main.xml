@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="homepage"
             app:srcCompat="@android:drawable/presence_busy" />
 
         <ImageButton
@@ -27,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="aipage"
             app:srcCompat="@android:drawable/ic_menu_search" />
 
         <ImageButton
@@ -34,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="profilepage"
             app:srcCompat="@android:drawable/btn_star" />
 
     </LinearLayout>
