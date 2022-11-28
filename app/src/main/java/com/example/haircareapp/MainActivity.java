@@ -18,4 +18,6 @@ public class MainActivity extends AppCompatActivity {
         discoveryVideo.setVideoURI(uri);
         discoveryVideo.start();
     }
+
+
 }
