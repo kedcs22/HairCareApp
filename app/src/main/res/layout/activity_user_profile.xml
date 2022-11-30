@@ -75,7 +75,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="165dp"
         android:backgroundTint="#47E8E3"
         android:fontFamily="sans-serif-medium"
         android:text="Saved Videos"

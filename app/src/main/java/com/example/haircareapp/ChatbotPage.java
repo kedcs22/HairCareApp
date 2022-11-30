@@ -9,26 +9,26 @@ import android.widget.ImageButton;
 
 public class ChatbotPage extends AppCompatActivity {
 
-    //private ImageButton homePage;
-    //private ImageButton chatBot;
-    //private ImageButton profilePage;
+    private ImageButton homePage;
+    private ImageButton chatBot;
+    private ImageButton profilePage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatbot_page);
 
-        //homePage = findViewById(R.id.homePage);
-        //profilePage = findViewById(R.id.profilePage);
-        //chatBot = findViewById(R.id.chatBot);
+        homePage = findViewById(R.id.homePage);
+        profilePage = findViewById(R.id.profilePage);
+        chatBot = findViewById(R.id.chatBot);
 
-        //initHomePage();
-        //initProfilePage();
-        //initChatBot();
+        initHomePage();
+        initProfilePage();
+        initChatBot();
     }
 
 
-    /*    private void initHomePage() {
+        private void initHomePage() {
         homePage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(ChatbotPage.this, MainActivity.class);
@@ -56,5 +56,5 @@ public class ChatbotPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    } */
+    }
 }
