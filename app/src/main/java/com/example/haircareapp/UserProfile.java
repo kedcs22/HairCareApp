@@ -19,8 +19,8 @@ public class UserProfile extends AppCompatActivity {
     private Button followedCreators;
 
     protected void Create(Bundle savedInstancesate){
-        super.onCreate(savedInstanceState);
-        setCurrentView(R.Layput.)
+       // super.onCreate(savedInstanceState);
+       // setCurrentView(R.Layput.)
     }
 
 
