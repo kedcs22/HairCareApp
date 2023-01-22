@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class UserProfile extends AppCompatActivity {
@@ -12,6 +13,15 @@ public class UserProfile extends AppCompatActivity {
     private ImageButton homePage;
     private ImageButton chatBot;
     private ImageButton profilePage;
+
+    private Button savedVideos;
+    private Button savedArticles;
+    private Button followedCreators;
+
+    protected void Create(Bundle savedInstancesate){
+        super.onCreate(savedInstanceState);
+        setCurrentView(R.Layput.)
+    }
 
 
 
