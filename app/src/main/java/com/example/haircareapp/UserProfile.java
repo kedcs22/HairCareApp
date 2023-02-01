@@ -18,9 +18,19 @@ public class UserProfile extends AppCompatActivity {
     private Button savedArticles;
     private Button followedCreators;
 
-    protected void Create(Bundle savedInstancesate){
-       // super.onCreate(savedInstanceState);
-       // setCurrentView(R.Layput.)
+    protected void onClick(Bundle savedInstancesate){
+    //super.onCreate(savedInstanceState);
+    //setContentView(R.Layout.activity_user_profile);
+    //homePage = findViewById(R.id.homePage);
+    //profilePage = findViewById(r.id.profilePage);
+    //chatBot = findViewById(R.id.chatBot);
+
+    //    initHomePage();
+    //   initChatBot();
+    //  initProfilePage();
+
+        Intent intent = new Intent(this, SavedVideos.class);
+        startActivity(intent);
     }
 
 
