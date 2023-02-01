@@ -18,27 +18,25 @@ public class UserProfile extends AppCompatActivity {
     private Button savedArticles;
     private Button followedCreators;
 
-    protected void onClick(Bundle savedInstancesate){
-    //super.onCreate(savedInstanceState);
-    //setContentView(R.Layout.activity_user_profile);
-    //homePage = findViewById(R.id.homePage);
-    //profilePage = findViewById(r.id.profilePage);
-    //chatBot = findViewById(R.id.chatBot);
-
-    //    initHomePage();
-    //   initChatBot();
-    //  initProfilePage();
-
-        Intent intent = new Intent(this, SavedVideos.class);
-        startActivity(intent);
-    }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        savedVideos = (Button) findViewById(R.id.button);
+        savedArticles = findViewById(R.id.button2);
+        followedCreators = findViewById(R.id.button3);
+
+        savedVideos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                opensavedFollow();
+            }
+        });
+
+        public void openactivity_user_profile(){
+            Intent intent = new Intent
+        }
 
         homePage = findViewById(R.id.homePage);
         profilePage = findViewById(R.id.profilePage);
@@ -48,6 +46,7 @@ public class UserProfile extends AppCompatActivity {
         initHomePage();
         initChatBot();
     }
+
 
     private void initHomePage() {
         homePage.setOnClickListener(new View.OnClickListener() {
