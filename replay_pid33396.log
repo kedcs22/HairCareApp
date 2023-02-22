@@ -3763,11 +3763,11 @@ instanceKlass org/gradle/tooling/events/SkippedResult
 instanceKlass com/android/build/gradle/tasks/GenerateBuildConfigKt
 instanceKlass com/android/build/gradle/internal/attribution/BuildAttributionService$Parameters$Inject
 instanceKlass java/io/ObjectInputStream$FieldValues
-instanceKlass java/io/ObjectInputFilter$Config$$Lambda$954
+instanceKlass java/io/ObjectInputFilter$com.example.haircareapp.Config$$Lambda$954
 instanceKlass jdk/internal/misc/JavaObjectInputFilterAccess
-instanceKlass java/io/ObjectInputFilter$Config$$Lambda$953
+instanceKlass java/io/ObjectInputFilter$com.example.haircareapp.Config$$Lambda$953
 instanceKlass java/io/ObjectInputFilter
-instanceKlass java/io/ObjectInputFilter$Config
+instanceKlass java/io/ObjectInputFilter$com.example.haircareapp.Config
 instanceKlass java/io/ObjectInputStream$ValidationList
 instanceKlass java/io/ObjectInputStream$HandleTable$HandleList
 instanceKlass java/io/ObjectInputStream$HandleTable
@@ -6215,8 +6215,8 @@ instanceKlass com/android/tools/build/jetifier/core/pom/DependencyVersions$Compa
 instanceKlass com/android/tools/build/jetifier/core/pom/DependencyVersions
 instanceKlass com/android/tools/build/jetifier/processor/TimestampsPolicy$Companion
 instanceKlass com/android/tools/build/jetifier/processor/TimestampsPolicy
-instanceKlass com/android/tools/build/jetifier/core/config/Config$Companion
-instanceKlass com/android/tools/build/jetifier/core/config/Config
+instanceKlass com/android/tools/build/jetifier/core/config/com.example.haircareapp.Config$Companion
+instanceKlass com/android/tools/build/jetifier/core/config/com.example.haircareapp.Config
 instanceKlass com/android/tools/build/jetifier/core/proguard/ProGuardTypesMap$Companion
 instanceKlass com/android/tools/build/jetifier/core/proguard/ProGuardTypesMap
 instanceKlass com/android/tools/build/jetifier/core/proguard/ProGuardType$Companion
@@ -6250,7 +6250,7 @@ instanceKlass com/google/gson/internal/UnsafeAllocator
 instanceKlass com/google/gson/internal/ConstructorConstructor$14
 instanceKlass com/android/tools/build/jetifier/core/proguard/ProGuardTypesMap$JsonData
 instanceKlass com/android/tools/build/jetifier/core/type/TypesMap$JsonData
-instanceKlass com/android/tools/build/jetifier/core/config/Config$JsonData
+instanceKlass com/android/tools/build/jetifier/core/config/com.example.haircareapp.Config$JsonData
 instanceKlass kotlin/io/TextStreamsKt
 instanceKlass kotlin/text/Charsets
 instanceKlass com/android/tools/build/jetifier/core/utils/StdOutLogConsumer
