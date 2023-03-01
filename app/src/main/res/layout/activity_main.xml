@@ -18,12 +18,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+        >
+
+        <!-- app:layout_constraintTop_toBottomOf="@+id/scrollView2" -->
 
         <ImageButton
             android:id="@+id/homePage"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="homepage"
             app:srcCompat="@android:drawable/presence_busy" />
@@ -55,23 +57,25 @@
         android:textAlignment="center"
         android:textColor="#8A2222"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- app:layout_constraintBottom_toTopOf="@+id/scrollView2" -->
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="409dp"
-        android:layout_height="649dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greetingView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/greetingView">
+
+        <!-- app:layout_constraintBottom_toTopOf="@+id/linearLayout" -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,8 +106,9 @@
                         android:id="@+id/videoPlayer"
                         android:layout_width="375dp"
                         android:layout_height="250dp"
-
+                        android:padding="10dp"
                         />
+
 
 
                 </LinearLayout>
@@ -119,7 +124,7 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="280dp">
+                android:layout_height="wrap_content">
 
 
 

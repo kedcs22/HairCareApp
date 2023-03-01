@@ -19,6 +19,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class MainActivity extends YouTubeBaseActivity {
 
     String api_key = "AIzaSyDYtzNF6N_4N2HK5efkC0pLxw4eiZS8was";
@@ -48,6 +50,10 @@ public class MainActivity extends YouTubeBaseActivity {
         initVideoPage();
 
         YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.videoPlayer);
+        //YouTubePlayerView ytPlayer2 = (YouTubePlayerView)findViewById(R.id.videoPlayer2);
+        ArrayList<String> videos = new ArrayList<>();
+        videos.add("bHpPQcCiKJ8");
+        videos.add("YvBhxYQRCuY");
 
         ytPlayer.initialize( api_key,
                 new YouTubePlayer.OnInitializedListener() {
@@ -55,7 +61,9 @@ public class MainActivity extends YouTubeBaseActivity {
                     @Override
                     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b)
                     {
-                        youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
+                        youTubePlayer.loadVideos(videos, 0,1);
+                        //youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
+                        youTubePlayer.pause();
                         //youTubePlayer.play();
                     }
 
