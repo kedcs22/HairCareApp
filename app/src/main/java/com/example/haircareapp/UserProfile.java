@@ -31,9 +31,9 @@ public class UserProfile extends AppCompatActivity {
         initHomePage();
         initChatBot();
 
-        savedVideos = (Button) findViewById(R.id.button);
-        savedArticles = findViewById(R.id.button2);
-        followedCreators = findViewById(R.id.button3);
+        savedVideos = findViewById(R.id.savedVideos);
+        savedArticles = findViewById(R.id.savedArticles);
+        followedCreators = findViewById(R.id.followedCreators);
 
         initSavedArticles();
         initSavedVideos();
@@ -43,9 +43,9 @@ public class UserProfile extends AppCompatActivity {
 
 
     private void initSavedArticles () {
-        homePage.setOnClickListener(new View.OnClickListener() {
+        savedArticles.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(UserProfile.this, SavedVideos.class);
+                Intent intent = new Intent(UserProfile.this, SavedArticles.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -53,7 +53,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     private void initSavedVideos () {
-        homePage.setOnClickListener(new View.OnClickListener() {
+        savedVideos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(UserProfile.this, SavedVideos.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -63,7 +63,7 @@ public class UserProfile extends AppCompatActivity {
     }
 
     private void initFollowedCreators() {
-        homePage.setOnClickListener(new View.OnClickListener() {
+        followedCreators.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(UserProfile.this, FollowedCreators.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
