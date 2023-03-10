@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-condensed"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Saved Videos"
@@ -100,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="How to Use Hair Oil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
@@ -109,6 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="50dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="3C Haircut Tutorial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12" />
@@ -118,6 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="How to Prepare Hair Dye"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13" />
@@ -137,6 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="How to Clean Hair Clippers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView14" />
