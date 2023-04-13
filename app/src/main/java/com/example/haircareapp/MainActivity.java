@@ -28,7 +28,6 @@ public class MainActivity extends YouTubeBaseActivity {
     private ImageButton homePage;
     private ImageButton chatBot;
     private ImageButton profilePage;
-    private Button PlayVideo1;
 
 
     @Override
@@ -41,21 +40,43 @@ public class MainActivity extends YouTubeBaseActivity {
         homePage = findViewById(R.id.homePage);
         profilePage = findViewById(R.id.profilePage);
         chatBot = findViewById(R.id.chatBot);
-        PlayVideo1 = findViewById(R.id.PlayVideo1);
+
 
 
         initHomePage();
         initChatBot();
         initProfilePage();
-        initVideoPage();
 
-        YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.videoPlayer);
-        //YouTubePlayerView ytPlayer2 = (YouTubePlayerView)findViewById(R.id.videoPlayer2);
+
+        YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.videoPlayer1);
+        YouTubePlayerView ytPlayer2 = (YouTubePlayerView)findViewById(R.id.videoPlayer2);
         ArrayList<String> videos = new ArrayList<>();
         videos.add("bHpPQcCiKJ8");
         videos.add("YvBhxYQRCuY");
 
         ytPlayer.initialize( api_key,
+                new YouTubePlayer.OnInitializedListener() {
+
+                    @Override
+                    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b)
+                    {
+                        youTubePlayer.loadVideos(videos, 0,1);
+                        //youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
+                        youTubePlayer.pause();
+                        //youTubePlayer.play();
+                    }
+
+                    // Inside onInitializationFailure
+                    // implement the failure functionality
+                    // Here we will show toast
+                    @Override
+                    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult)
+                    {
+                        Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        ytPlayer2.initialize( api_key,
                 new YouTubePlayer.OnInitializedListener() {
 
                     @Override
@@ -144,14 +165,6 @@ public class MainActivity extends YouTubeBaseActivity {
         });
     }
 
-    private void initVideoPage() {
-        PlayVideo1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, VideoPlayerActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 }
