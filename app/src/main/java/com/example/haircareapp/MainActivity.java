@@ -13,6 +13,8 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
+
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.VideoView;
@@ -25,9 +27,19 @@ public class MainActivity extends YouTubeBaseActivity {
 
     String api_key = "AIzaSyDYtzNF6N_4N2HK5efkC0pLxw4eiZS8was";
 
+    private YouTubePlayer youTubePlayer;
+    private String video_ID;
+
     private ImageButton homePage;
     private ImageButton chatBot;
     private ImageButton profilePage;
+
+    private Button button1;
+    private Button button2;
+    private Button button3;
+    private Button button4;
+    private Button button5;
+
 
 
     @Override
@@ -41,69 +53,24 @@ public class MainActivity extends YouTubeBaseActivity {
         profilePage = findViewById(R.id.profilePage);
         chatBot = findViewById(R.id.chatBot);
 
+        button1 = findViewById(R.id.btnOne);
+        button2 = findViewById(R.id.btnTwo);
+        button3 = findViewById(R.id.btnThree);
+        button4 = findViewById(R.id.btnFour);
+        button5 = findViewById(R.id.btnFive);
+
 
 
         initHomePage();
         initChatBot();
         initProfilePage();
-
-
-        YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.videoPlayer1);
-        YouTubePlayerView ytPlayer2 = (YouTubePlayerView)findViewById(R.id.videoPlayer2);
-        ArrayList<String> videos = new ArrayList<>();
-        videos.add("bHpPQcCiKJ8");
-        videos.add("YvBhxYQRCuY");
-
-        ytPlayer.initialize( api_key,
-                new YouTubePlayer.OnInitializedListener() {
-
-                    @Override
-                    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b)
-                    {
-                        youTubePlayer.loadVideos(videos, 0,1);
-                        //youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
-                        youTubePlayer.pause();
-                        //youTubePlayer.play();
-                    }
-
-                    // Inside onInitializationFailure
-                    // implement the failure functionality
-                    // Here we will show toast
-                    @Override
-                    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult)
-                    {
-                        Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        ytPlayer2.initialize( api_key,
-                new YouTubePlayer.OnInitializedListener() {
-
-                    @Override
-                    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b)
-                    {
-                        youTubePlayer.loadVideos(videos, 0,1);
-                        //youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
-                        youTubePlayer.pause();
-                        //youTubePlayer.play();
-                    }
-
-                    // Inside onInitializationFailure
-                    // implement the failure functionality
-                    // Here we will show toast
-                    @Override
-                    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult)
-                    {
-                        Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
-                    }
-                });
-        //super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_video_player);
+        //initButtonOne();
 
         // Get reference to the view of Video player
-        //VideoView ytPlayer = (VideoView)findViewById(R.id.discoveryVideo);
+        YouTubePlayerView ytPlayerView = (YouTubePlayerView) findViewById(R.id.ytPlayer);
 
-        /*ytPlayer.initialize( api_key,
+        ytPlayerView.initialize(
+                api_key,
                 new YouTubePlayer.OnInitializedListener() {
                     // Implement two methods by clicking on red
                     // error bulb inside onInitializationSuccess
@@ -111,29 +78,91 @@ public class MainActivity extends YouTubeBaseActivity {
                     // link that you want to play In here we
                     // also handle the play and pause
                     // functionality
+
                     @Override
-                    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b)
-                    {
-                        youTubePlayer.loadVideo("bHpPQcCiKJ8", 0);
-                        youTubePlayer.play();
+                    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+                        initButtonOne();
+                        initButtonTwo();
+                        initButtonThree();
+                        initButtonFour();
+                        initButtonFive();
                     }
+
 
                     // Inside onInitializationFailure
                     // implement the failure functionality
                     // Here we will show toast
                     @Override
-                    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult)
+                    public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                        YouTubeInitializationResult
+                                                                youTubeInitializationResult)
                     {
                         Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
                     }
-                }); */
+                });
 
-        //Uri uri = Uri.parse("https://www.youtube.com/watch?v=tYS-PSkzi7c");
-        //VideoView discoveryVideo = (VideoView) findViewById(R.id.discoveryVideo);
-        //discoveryVideo.setVideoURI(uri);
-        //discoveryVideo.start();
+
     }
 
+    private void initButtonOne() {
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent(MainActivity.this, api_key, "Pj3V86MCMJg", 0, true, false);
+                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initButtonTwo() {
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent(MainActivity.this, api_key, "GfSluWrVH20", 0, true, false);
+                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initButtonThree() {
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent(MainActivity.this, api_key, "fGODBDMt-_E", 0, true, false);
+                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initButtonFour() {
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent(MainActivity.this, api_key, "Gs4Y-M4aCek", 0, true, false);
+                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initButtonFive() {
+        button5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = YouTubeStandalonePlayer.createVideoIntent(MainActivity.this, api_key, "x_tU_e5puSM", 0, true, false);
+                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
 
     private void initHomePage() {
         homePage.setOnClickListener(new View.OnClickListener() {
