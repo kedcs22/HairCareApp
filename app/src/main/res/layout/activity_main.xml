@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:contentDescription="homepage"
-            app:srcCompat="@android:drawable/presence_busy" />
+            android:src="@android:drawable/presence_busy" />
 
         <ImageButton
             android:id="@+id/chatBot"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="aipage"
-            app:srcCompat="@android:drawable/ic_menu_search" />
+            android:src ="@android:drawable/ic_menu_search" />
 
         <ImageButton
             android:id="@+id/profilePage"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="profilepage"
-            app:srcCompat="@android:drawable/btn_star" />
+            android:src ="@android:drawable/btn_star" />
 
     </LinearLayout>
 
