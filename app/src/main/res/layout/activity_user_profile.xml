@@ -54,7 +54,7 @@
     <Button
         android:id="@+id/followedCreators"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:backgroundTint="#A3A1A3"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Followed Creators"
@@ -95,10 +95,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="95dp"
+        android:layout_height="94dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/th" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
