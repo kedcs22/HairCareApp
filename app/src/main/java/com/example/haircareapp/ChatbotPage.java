@@ -81,7 +81,7 @@ public class ChatbotPage extends AppCompatActivity {
 
     }
 
-    /*
+    /* blah
     // send message function function
     private void sendMessage() {
         String msg = messageBox.getText().toString();
