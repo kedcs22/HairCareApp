@@ -1,13 +1,9 @@
 package com.example.haircareapp;
 
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -48,6 +44,9 @@ public class VideoPlayerActivity extends YouTubeBaseActivity {
                         Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public static class practice_page {
     }
 }
 
