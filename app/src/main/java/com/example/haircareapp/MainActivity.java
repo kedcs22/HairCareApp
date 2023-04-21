@@ -3,9 +3,6 @@ package com.example.haircareapp;
 
 import android.content.Intent;
 import android.widget.Toast;
-import androidx.annotation.Nullable;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,9 +14,7 @@ import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.VideoView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -452,6 +447,9 @@ public class MainActivity extends YouTubeBaseActivity {
             }
         });
     }
+
+
+
 
 
 
