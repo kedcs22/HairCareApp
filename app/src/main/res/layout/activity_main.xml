@@ -10,7 +10,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/BottomlinearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,95 +61,137 @@
 
     <!-- app:layout_constraintBottom_toTopOf="@+id/scrollView2" -->
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="2dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greetingView"
-        app:layout_constraintVertical_bias="0.0">
 
         <!-- app:layout_constraintBottom_toTopOf="@+id/linearLayout" -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="15dp"
                 android:text="Following"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/greetingView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <com.google.android.youtube.player.YouTubePlayerView
                 android:id="@+id/ytPlayer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-            <LinearLayout
+            </com.google.android.youtube.player.YouTubePlayerView>
+
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/BottomlinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ytPlayer">
 
-                <HorizontalScrollView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <Button
-                            android:id="@+id/btnOne"
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Button" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/btnTwo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Button" />
+                            <Button
+                                android:id="@+id/btnOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Creator: '360 Jeezy' | How to Tutorial: Mid Fade Haircut" />
 
-                        <Button
-                            android:id="@+id/btnThree"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
+                            <Button
+                                android:id="@+id/btnTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Creator: 'Natural Academia' | 'THE SECRET TO NATURAL HAIR GROWTH | NO ONE WANTS TO TELL YOU'" />
 
-                        <Button
-                            android:id="@+id/btnFour"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
+                            <Button
+                                android:id="@+id/btnThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Ty'Jalayah Robertson' | 'Simple Wash Routine for Natural Men (No Extras!)|Short-Medium Length Hair'" />
 
-                        <Button
-                            android:id="@+id/btnFive"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
-                    </LinearLayout>
-                </HorizontalScrollView>
+                            <Button
+                                android:id="@+id/btnFour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Audrey Victoria' | 'HAIR CARE ROUTINE 101 | How To Build Your Hair Care Routine'" />
 
-            </LinearLayout>
+                            <Button
+                                android:id="@+id/btnFive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Doro Cubillo' | 'HAIRCARE MISTAKES THAT WILL RUIN YOUR HAIR! | How to grow long healthy hair'" />
 
-        </LinearLayout>
-    </ScrollView>
+                            <Button
+                                android:id="@+id/btnSix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'King Bril' | 'My Natural Hair Wash Day Routine for Curls + NEW FIRE SHAMPOO'" />
+
+                            <Button
+                                android:id="@+id/btnSeven"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Juwan Gaines' | 'Grow Longer Hair Faster! Men's Wash Day Routine (MOISTURE AND LENGTH Retention)'" />
+
+                            <Button
+                                android:id="@+id/btnEight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Kozact' | 'AFRO JOURNEY FOR BEGINNERS ( How to Grow A Afro Fast )'" />
+
+                            <Button
+                                android:id="@+id/btnNine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Kayli Boyle' | 'my hair care routine for healthy hair'" />
+
+                            <Button
+                                android:id="@+id/btnTen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'Tim Dessaint' | 'How To Grow Long And Healthy Hair | 10 Quick Tips'" />
+
+                            <Button
+                                android:id="@+id/btnEleven"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Creator: 'QTheBraider' | 'HOW TO: Double Strand Twist (Male Edition)'" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
